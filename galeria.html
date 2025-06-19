@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería para Perla 💖</title>
+  <link rel="stylesheet" href="per.css">
+</head>
+<body>
+
+  <!-- Navegación -->
+  <nav class="navbar">
+    <a href="index1.html">Inicio</a>
+    <a href="cartas.html">Cartas</a>
+    <a href="galeria.html" class="activo">Galería</a>
+  </nav>
+
+  <!-- Galería en forma de corazón -->
+  <section id="galeria">
+    <h2>Galería en forma de corazón 💘</h2>
+    <div class="corazon-galeria">
+      <img src="1.jpg" alt="Foto 1" class="img1">
+      <img src="2.jpg" alt="Foto 2" class="img2">
+      <img src="3.jpg" alt="Foto 3" class="img3">
+      <img src="4.jpg" alt="Foto 4" class="img4">
+      <img src="5.jpg" alt="Foto 5" class="img5">
+      <img src="6.jpg" alt="Foto 6" class="img6">
+      <img src="7.jpg" alt="Foto 7" class="img7">
+      <img src="8.jpg" alt="Foto 8" class="img8">
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Imagen ampliada">
+  </div>
+
+  <!-- Script para el efecto -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    const images = document.querySelectorAll('.corazon-galeria img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
