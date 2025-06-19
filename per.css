@@ -195,3 +195,26 @@ h1, h2 {
     font-size: 16px;
   }
 }
+.navbar {
+  background-color: #ff69b4;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Permite deslizar horizontalmente si no cabe */
+  white-space: nowrap; /* Evita salto de línea */
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  flex-shrink: 0; /* No se reduzca el tamaño del texto */
+}
+
+.navbar a:hover {
+  opacity: 0.8;
+}
